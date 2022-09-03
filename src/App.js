@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import AddModal from './components/AddModal'
+import GetUsers from "./components/GetUsers";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="main">
+        <div className="container">
+          <div className="list__title">
+            <div className="title">Users List</div>
+            <AddModal />
+          </div>
+          <GetUsers />
+        </div>
+      </div>
     </div>
   );
 }
